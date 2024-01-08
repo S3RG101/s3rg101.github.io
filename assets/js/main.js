@@ -10,7 +10,7 @@
 
 // init
 var maxx = document.body.clientWidth;
-var maxy = document.body.clientHeight;
+var maxy = document.documentElement.scrollHeight;
 var halfx = maxx / 2;
 var halfy = maxy / 2;
 var canvas = document.getElementById("canvas");
@@ -44,7 +44,7 @@ function dot() {
   this.rad_y = 1.2 * Math.random() * halfy + 1;
   this.alpha = Math.random() * 360 + 1;
   this.speed = Math.random() * 100 < 50 ? 1 : -1;
-  this.speed *= 0.05;
+  this.speed *= 0.02;
   this.size = Math.random() * 10 + 1;
   // this.color = Math.floor(Math.random() * 256);
 }
